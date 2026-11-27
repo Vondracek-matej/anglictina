@@ -1,0 +1,545 @@
+{
+ "nacteno": "2026-11-27T13:42:00",
+ "stav": "Teď se učí: Weekend activities",
+ "jednotka": 2,
+ "jednotek": 10,
+ "dalsi": "Planets and space",
+ "slovicek": 687,
+ "ukoly": 0,
+ "lekce": [
+  [
+   "2026-11-30",
+   "11:30",
+   "Princess Ev"
+  ],
+  [
+   "2026-12-01",
+   "08:30",
+   "Roxy R"
+  ],
+  [
+   "2026-12-01",
+   "11:00",
+   "Sandy"
+  ],
+  [
+   "2026-12-02",
+   "11:00",
+   "Betty B"
+  ],
+  [
+   "2026-12-02",
+   "13:30",
+   "Princess Ev"
+  ],
+  [
+   "2026-12-03",
+   "09:30",
+   "Tali"
+  ],
+  [
+   "2026-12-03",
+   "13:00",
+   "Princess Ev"
+  ],
+  [
+   "2026-12-04",
+   "11:30",
+   "Princess Ev"
+  ],
+  [
+   "2026-12-07",
+   "11:30",
+   "Princess Ev"
+  ],
+  [
+   "2026-12-08",
+   "08:30",
+   "Roxy R"
+  ],
+  [
+   "2026-12-08",
+   "10:00",
+   "Roxy R"
+  ],
+  [
+   "2026-12-09",
+   "12:30",
+   "Sandy"
+  ],
+  [
+   "2026-12-09",
+   "13:30",
+   "Princess Ev"
+  ],
+  [
+   "2026-12-10",
+   "10:30",
+   "Tali"
+  ],
+  [
+   "2026-12-11",
+   "11:30",
+   "Princess Ev"
+  ],
+  [
+   "2026-12-14",
+   "11:00",
+   "Tali"
+  ],
+  [
+   "2026-12-15",
+   "10:30",
+   "Tali"
+  ],
+  [
+   "2026-12-16",
+   "08:30",
+   "Maria Kh"
+  ],
+  [
+   "2026-12-17",
+   "10:30",
+   "Tali"
+  ],
+  [
+   "2026-12-18",
+   "11:00",
+   "Maria Kh"
+  ],
+  [
+   "2026-12-21",
+   "09:30",
+   "Maria Kh"
+  ],
+  [
+   "2026-12-22",
+   "10:00",
+   "Maria Kh"
+  ],
+  [
+   "2026-12-29",
+   "10:30",
+   "Maria Kh"
+  ],
+  [
+   "2026-12-30",
+   "13:00",
+   "Maria Kh"
+  ],
+  [
+   "2026-12-31",
+   "10:30",
+   "Maria Kh"
+  ],
+  [
+   "2027-01-01",
+   "11:00",
+   "Maria Kh"
+  ],
+  [
+   "2027-01-04",
+   "10:00",
+   "Tali"
+  ],
+  [
+   "2027-01-05",
+   "10:30",
+   "Tali"
+  ],
+  [
+   "2027-01-06",
+   "11:30",
+   "Tali"
+  ],
+  [
+   "2027-01-07",
+   "10:30",
+   "Tali"
+  ],
+  [
+   "2027-01-08",
+   "11:00",
+   "Maria Kh"
+  ],
+  [
+   "2027-01-11",
+   "13:30",
+   "Roxy R"
+  ],
+  [
+   "2027-01-12",
+   "08:30",
+   "Roxy R"
+  ],
+  [
+   "2027-01-13",
+   "11:30",
+   "Tali"
+  ],
+  [
+   "2027-01-14",
+   "10:30",
+   "Tali"
+  ],
+  [
+   "2027-01-15",
+   "11:00",
+   "Maria Kh"
+  ],
+  [
+   "2027-01-18",
+   "13:30",
+   "Roxy R"
+  ],
+  [
+   "2027-01-19",
+   "08:30",
+   "Roxy R"
+  ],
+  [
+   "2027-01-20",
+   "11:30",
+   "Tali"
+  ],
+  [
+   "2027-01-21",
+   "10:30",
+   "Tali"
+  ],
+  [
+   "2027-01-22",
+   "12:00",
+   "Roxy R"
+  ],
+  [
+   "2027-01-25",
+   "13:30",
+   "Roxy R"
+  ],
+  [
+   "2027-01-26",
+   "08:30",
+   "Roxy R"
+  ],
+  [
+   "2027-01-27",
+   "11:30",
+   "Tali"
+  ],
+  [
+   "2027-01-28",
+   "10:30",
+   "Tali"
+  ],
+  [
+   "2027-01-29",
+   "12:00",
+   "Roxy R"
+  ],
+  [
+   "2027-02-01",
+   "12:30",
+   "Sandy"
+  ],
+  [
+   "2027-02-02",
+   "10:00",
+   "Sandy"
+  ],
+  [
+   "2027-02-03",
+   "12:30",
+   "Sandy"
+  ],
+  [
+   "2027-02-04",
+   "12:30",
+   "Sandy"
+  ],
+  [
+   "2027-02-05",
+   "12:00",
+   "Tali"
+  ],
+  [
+   "2027-02-08",
+   "13:30",
+   "Roxy R"
+  ],
+  [
+   "2027-02-09",
+   "08:30",
+   "Roxy R"
+  ],
+  [
+   "2027-02-10",
+   "11:30",
+   "Tali"
+  ],
+  [
+   "2027-02-11",
+   "10:30",
+   "Tali"
+  ],
+  [
+   "2027-02-12",
+   "12:00",
+   "Roxy R"
+  ],
+  [
+   "2027-02-15",
+   "13:30",
+   "Roxy R"
+  ],
+  [
+   "2027-02-16",
+   "08:30",
+   "Roxy R"
+  ],
+  [
+   "2027-02-17",
+   "11:30",
+   "Tali"
+  ],
+  [
+   "2027-02-18",
+   "10:00",
+   "Tali"
+  ]
+ ],
+ "zpravy": [
+  {
+   "datum": "2026-11-26",
+   "od": "14:00",
+   "ucitel": "Ziel M",
+   "tema": "Magic Academy Quest 2: Amisa's Pendant – oblečení, přítomný a průběhový čas",
+   "cz": "Žákyně pěkně zvládla lekci o oblečení a o tom, co nosíme v různých ročních obdobích. Naučila se školní oblečení (sukně, košile, kalhoty, ponožky, boty), procvičovala záporné věty v přítomném čase a vybírala mezi přítomným a průběhovým časem. Hrála a poslouchala dialogy.",
+   "doporuceni": "Pojmenovat každý kus oblečení a použít ho v celé větě: „I wear a shirt and trousers to school.“ Popsat, co má kdo na sobě: „She is wearing a skirt and shoes.“ Třídit oblečení podle ročních období – kabát na zimu, tričko na léto.",
+   "slova": [
+    [
+     "skirt",
+     "sukně"
+    ],
+    [
+     "shirt",
+     "košile"
+    ],
+    [
+     "trousers",
+     "kalhoty"
+    ],
+    [
+     "socks",
+     "ponožky"
+    ],
+    [
+     "shoes",
+     "boty"
+    ],
+    [
+     "I wear…",
+     "Nosím…"
+    ],
+    [
+     "She is wearing…",
+     "Ona má na sobě…"
+    ]
+   ]
+  },
+  {
+   "datum": "2026-11-26",
+   "od": "12:30",
+   "ucitel": "Princess Ev",
+   "tema": "Magic Academy Quest 1: Astro buys a swimsuit – oblečení",
+   "cz": "Žákyně se učila slovíčka o oblečení (kraťasy, plavky, tenisky, sandály, džíny, rukavice, čepice, šála, svetr, kabát) a třídila oblečení na letní a zimní. Procvičovala průběhový čas (co má kdo právě na sobě), porovnávala ho s přítomným časem a hrála dialogy. Učitelka ji chválí, že se zapojuje.",
+   "doporuceni": "Víc procvičit průběhový čas: am/is/are + sloveso s -ing, např. „I am wearing a jacket.“, „She is wearing a hat.“, „They are wearing coats.“ U věcí do páru (trousers, jeans, shorts) se neříká „a“.",
+   "slova": [
+    [
+     "shorts",
+     "kraťasy"
+    ],
+    [
+     "swimsuit",
+     "plavky"
+    ],
+    [
+     "trainers",
+     "tenisky"
+    ],
+    [
+     "sandals",
+     "sandály"
+    ],
+    [
+     "jeans",
+     "džíny"
+    ],
+    [
+     "gloves",
+     "rukavice"
+    ],
+    [
+     "scarf",
+     "šála"
+    ],
+    [
+     "sweater",
+     "svetr"
+    ],
+    [
+     "coat",
+     "kabát"
+    ],
+    [
+     "I am wearing…",
+     "Mám na sobě…"
+    ]
+   ]
+  },
+  {
+   "datum": "2026-11-25",
+   "od": "11:30",
+   "ucitel": "Princess Ev",
+   "tema": "Magic Academy Quest 7: Sally can’t find her things – opakování, hlásky qu, gn, ch",
+   "cz": "Žákyně mluvila zřetelně a zkoušela všechny aktivity. Povídaly si o její rodině a o tom, co kdo z rodiny dělá rád. Procvičila slovíčka pro letní a zimní činnosti, slovesa s koncovkou -ing a skupiny písmen gn, ch a qu.",
+   "doporuceni": "Víc procvičovat skupiny písmen gn, ch a qu: nejdřív říct hlásku, pak přečíst celé slovo a myslet na to, co znamená. Stačí chvilka každý den.",
+   "slova": [
+    [
+     "family",
+     "rodina"
+    ],
+    [
+     "hobbies",
+     "koníčky"
+    ],
+    [
+     "summer activities",
+     "letní činnosti"
+    ],
+    [
+     "winter activities",
+     "zimní činnosti"
+    ],
+    [
+     "gn",
+     "hláska „gn“ – g se nevyslovuje (sign)"
+    ],
+    [
+     "ch",
+     "hláska „ch“ – čte se jako č (chair)"
+    ],
+    [
+     "qu",
+     "hláska „qu“ – čte se jako kv (queen)"
+    ]
+   ]
+  },
+  {
+   "datum": "2026-11-24",
+   "od": "12:30",
+   "ucitel": "Sav",
+   "tema": "Magic Academy Quest 6: What am I good at? – volný čas, „to“ + sloveso (proč něco dělám)",
+   "cz": "První lekce s novou učitelkou. Žákyně byla milá a lekcí prošla celkově dobře. Pomoc potřebovala hlavně u otázek k textu, který si právě přečetla.",
+   "doporuceni": "Povídat si s žákyní anglicky o koníčcích: co dělá ráda, co ji baví nejvíc a co nemá ráda. Chtít odpověď celou větou.",
+   "slova": [
+    [
+     "free time",
+     "volný čas"
+    ],
+    [
+     "hobbies",
+     "koníčky"
+    ],
+    [
+     "I am good at…",
+     "Jsem dobrý v…"
+    ],
+    [
+     "I like…",
+     "Mám rád…"
+    ],
+    [
+     "I don't like…",
+     "Nemám rád…"
+    ]
+   ]
+  },
+  {
+   "datum": "2026-11-24",
+   "od": "08:30",
+   "ucitel": "Roxy R",
+   "tema": "Magic Academy Quest 5: Don’t give up! – slovíčka: koníčky a zájmy",
+   "cz": "První lekce s novou učitelkou Roxy, která si žákyni moc oblíbila. Žákyně zahrála a pochopila dialog z lekce.",
+   "doporuceni": "Dál zkoušet dialogy a hrát je s odvahou. Mluvit o tom, co má a nemá ráda, celými větami. Dělat věty se slovesy jako like, love nebo hate a za nimi sloveso s -ing (I love swimming).",
+   "slova": [
+    [
+     "hobbies",
+     "koníčky"
+    ],
+    [
+     "interests",
+     "zájmy"
+    ],
+    [
+     "I love swimming",
+     "Zbožňuju plavání."
+    ],
+    [
+     "I hate…",
+     "Nesnáším…"
+    ],
+    [
+     "I like…",
+     "Mám rád…"
+    ]
+   ]
+  },
+  {
+   "datum": "2026-11-23",
+   "od": "11:00",
+   "ucitel": "Tali",
+   "tema": "Magic Academy Quest 3: Clumsy Sally – hlásky sw, tw, wh, sh, tr, th",
+   "cz": "Žákyně moc pěkně četla dialogy. Poznala a správně četla hlásky wh, sh, th, sw, tw a tr.",
+   "doporuceni": "Číst slova s hláskami sw, tw, tr. Doma hrát hru na slova: zvolit písmeno a každý napíše jídlo, věc, barvu a zvíře na to písmeno.",
+   "slova": [
+    [
+     "tractor",
+     "traktor"
+    ],
+    [
+     "swing",
+     "houpačka; houpat se"
+    ],
+    [
+     "twin",
+     "dvojče"
+    ],
+    [
+     "swim",
+     "plavat"
+    ],
+    [
+     "train",
+     "vlak"
+    ],
+    [
+     "twist",
+     "kroutit, točit"
+    ],
+    [
+     "sweet",
+     "sladký; bonbon"
+    ],
+    [
+     "true",
+     "pravdivý"
+    ],
+    [
+     "twelve",
+     "dvanáct"
+    ]
+   ]
+  }
+ ]
+}

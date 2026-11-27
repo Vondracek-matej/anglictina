@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Angličtina">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f2f2f7">
+<link rel="apple-touch-icon" href="ikona.png">
+<title>Moje angličtina</title>
+<style>
+  :root {
+    --bg: #f2f2f7; --card: #fff; --text: #1c1c1e; --muted: #6e6e73; --line: #e5e5ea;
+    --blue: #007aff; --green: #34c759; --orange: #ff9500; --pink: #ff2d55; --purple: #af52de;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.4 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    padding: env(safe-area-inset-top) 0 calc(84px + env(safe-area-inset-bottom));
+  }
+  main { max-width: 560px; margin: 0 auto; padding: 8px 16px 24px; }
+  h1 { font-size: 34px; font-weight: 800; margin: 18px 4px 4px; letter-spacing: -.5px; }
+  .sub { color: var(--muted); margin: 0 4px 16px; font-size: 15px; }
+  h2 { font-size: 20px; margin: 24px 4px 8px; }
+  .card { background: var(--card); border-radius: 18px; padding: 16px; margin-bottom: 12px; }
+  .hero { background: linear-gradient(135deg, #5e5ce6, #af52de 55%, #ff2d55); color: #fff; }
+  .hero .label { opacity: .85; font-size: 15px; font-weight: 600; }
+  .hero .big { font-size: 30px; font-weight: 800; margin: 4px 0 2px; }
+  .hero .when { font-size: 18px; font-weight: 600; }
+  .pill { display: inline-block; background: rgba(255,255,255,.25); border-radius: 99px; padding: 4px 12px; margin-top: 10px; font-weight: 700; }
+  .row { display: flex; align-items: center; gap: 12px; }
+  .row + .row { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 12px; }
+  .ico { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; font-size: 22px; flex: none; }
+  .grow { flex: 1; min-width: 0; }
+  .muted { color: var(--muted); font-size: 15px; }
+  .bar { height: 10px; background: var(--line); border-radius: 99px; overflow: hidden; margin-top: 8px; }
+  .bar > i { display: block; height: 100%; background: var(--green); border-radius: 99px; }
+  .day { font-weight: 700; font-size: 15px; color: var(--muted); text-transform: uppercase; letter-spacing: .3px; margin: 16px 4px 6px; }
+  .time { font-weight: 800; font-size: 20px; width: 64px; flex: none; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .chip { background: #eef4ff; color: var(--blue); border: 0; border-radius: 99px; padding: 7px 12px; font: inherit; font-size: 15px; font-weight: 600; }
+  button { font: inherit; cursor: pointer; }
+  .btn { border: 0; border-radius: 14px; padding: 14px 18px; font-weight: 700; font-size: 17px; }
+  .btn.blue { background: var(--blue); color: #fff; }
+  .btn.green { background: var(--green); color: #fff; }
+  .btn.gray { background: #e5e5ea; color: var(--text); }
+  .seg { display: flex; background: #e3e3e8; border-radius: 10px; padding: 2px; margin: 0 0 14px; }
+  .seg button { flex: 1; border: 0; background: none; padding: 8px; border-radius: 8px; font-weight: 600; font-size: 15px; }
+  .seg button.on { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+  select { font: inherit; width: 100%; padding: 12px; border-radius: 12px; border: 0; background: #fff; margin-bottom: 14px; appearance: none; }
+  .flip { perspective: 1000px; height: 260px; margin-bottom: 14px; }
+  .flip .in { position: relative; width: 100%; height: 100%; transition: transform .45s; transform-style: preserve-3d; }
+  .flip.otoc .in { transform: rotateY(180deg); }
+  .face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 22px;
+          display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center;
+          background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,.07); }
+  .face.zad { transform: rotateY(180deg); background: #effaf2; }
+  .face .w { font-size: 34px; font-weight: 800; line-height: 1.15; }
+  .face .h { color: var(--muted); font-size: 15px; margin-top: 14px; }
+  .speak { border: 0; background: #eef4ff; color: var(--blue); width: 52px; height: 52px; border-radius: 99px; font-size: 24px; margin-top: 16px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .score { text-align: center; color: var(--muted); margin: 10px 0 0; font-size: 15px; }
+  .wl .row { gap: 10px; }
+  .wl .en { font-weight: 700; }
+  .ok { color: var(--green); font-weight: 800; }
+  nav { position: fixed; left: 0; right: 0; bottom: 0; display: flex; justify-content: center;
+        padding: 6px 0 calc(6px + env(safe-area-inset-bottom)); background: rgba(249,249,251,.88);
+        backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-top: 1px solid rgba(0,0,0,.08); }
+  nav button { flex: 1; max-width: 140px; border: 0; background: none; color: #8e8e93; font-size: 11px; font-weight: 600; padding: 4px 0; }
+  nav button span { display: block; font-size: 26px; line-height: 1.1; filter: grayscale(1); opacity: .7; }
+  nav button.on { color: var(--blue); }
+  nav button.on span { filter: none; opacity: 1; }
+  .hidden { display: none; }
+  .warn { background: #fff4e5; color: #8a4b00; border-radius: 14px; padding: 12px 14px; font-size: 15px; margin-bottom: 12px; }
+  .confetti { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 9; }
+  .confetti i { position: absolute; top: -20px; width: 10px; height: 14px; border-radius: 2px; animation: pad 1.6s ease-in forwards; }
+  @keyframes pad { to { transform: translateY(110vh) rotate(540deg); } }
+</style>
+</head>
+<body>
+<main>
+  <section id="t-lekce"></section>
+  <section id="t-slova" class="hidden"></section>
+  <section id="t-ucitel" class="hidden"></section>
+</main>
+<nav>
+  <button data-t="lekce" class="on"><span>📅</span>Lekce</button>
+  <button data-t="slova"><span>🃏</span>Slovíčka</button>
+  <button data-t="ucitel"><span>💬</span>Od učitelky</button>
+</nav>
+<div class="confetti" id="konfety"></div>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const DNY = ["neděle", "pondělí", "úterý", "středa", "čtvrtek", "pátek", "sobota"];
+const DNY4 = ["v neděli", "v pondělí", "v úterý", "ve středu", "ve čtvrtek", "v pátek", "v sobotu"];
+let D = null, offline = false;
+
+// ---------- uložené věci v telefonu ----------
+const ls = {
+  get(k, def) { try { return JSON.parse(localStorage.getItem("ang-" + k)) ?? def; } catch { return def; } },
+  set(k, v) { try { localStorage.setItem("ang-" + k, JSON.stringify(v)); } catch {} }
+};
+let umim = new Set(ls.get("umim", []));
+
+// ---------- data ----------
+async function nacti() {
+  try {
+    const r = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) throw 0;
+    D = await r.json(); ls.set("data", D); offline = false;
+  } catch {
+    D = ls.get("data", null); offline = true;
+  }
+  vykresli();
+}
+
+const datum = (s, cas) => { const [y, m, d] = s.split("-").map(Number); const [h, mi] = (cas || "0:0").split(":").map(Number); return new Date(y, m - 1, d, h, mi); };
+const dnesStr = () => { const t = new Date(); return t.getFullYear() + "-" + String(t.getMonth() + 1).padStart(2, "0") + "-" + String(t.getDate()).padStart(2, "0"); };
+function kdyDen(s) {
+  const d = datum(s), dnes = datum(dnesStr()), rozdil = Math.round((d - dnes) / 864e5);
+  if (rozdil === 0) return "Dnes";
+  if (rozdil === 1) return "Zítra";
+  return DNY[d.getDay()][0].toUpperCase() + DNY[d.getDay()].slice(1) + " " + d.getDate() + ". " + (d.getMonth() + 1) + ".";
+}
+function zaKolik(dt) {
+  const min = Math.round((dt - new Date()) / 6e4);
+  if (min <= 0 && min > -30) return "Právě teď! 🎉";
+  if (min < 60) return "za " + min + " min";
+  const h = Math.floor(min / 60);
+  if (h < 24) return "za " + h + (h === 1 ? " hodinu" : h < 5 ? " hodiny" : " hodin");
+  const den = new Date(dt.getFullYear(), dt.getMonth(), dt.getDate());
+  const dd = Math.round((den - datum(dnesStr())) / 864e5);
+  if (dd === 1) return "zítra";
+  return "za " + dd + (dd === 1 ? " den" : dd < 5 ? " dny" : " dní");
+}
+
+// ---------- Lekce ----------
+function lekce() {
+  const el = $("#t-lekce");
+  if (!D) { el.innerHTML = '<h1>Moje angličtina</h1><div class="card">Načítám… Je telefon připojený na internet?</div>'; return; }
+  const ted = new Date();
+  const budouci = (D.lekce || []).filter(l => datum(l[0], l[1]) > new Date(ted - 30 * 6e4));
+  const dalsi = budouci[0];
+  let h = '<h1>Moje angličtina</h1><p class="sub">Ahoj! 👋 Tady máš svoje lekce a slovíčka.</p>';
+  if (offline) h += '<div class="warn">Teď nejsi na internetu. Ukazuju, co jsem si pamatoval naposledy.</div>';
+  if (dalsi) {
+    const dt = datum(dalsi[0], dalsi[1]);
+    h += `<div class="card hero"><div class="label">Příští lekce</div>
+      <div class="big">${kdyDen(dalsi[0])} v ${esc(dalsi[1])}</div>
+      <div class="when">s učitelkou ${esc(dalsi[2])}</div>
+      <div class="pill">${zaKolik(dt)}</div></div>`;
+  } else h += '<div class="card">Teď nemáš naplánovanou žádnou lekci.</div>';
+
+  const ukoly = D.ukoly || 0;
+  const pct = D.jednotek ? Math.round(100 * (D.jednotka || 0) / D.jednotek) : 0;
+  h += `<div class="card">
+    <div class="row"><div class="ico" style="background:#e8f8ec">${ukoly ? "📝" : "✅"}</div>
+      <div class="grow"><b>${ukoly ? "Domácí úkol: " + ukoly + (ukoly === 1 ? " cvičení" : ukoly < 5 ? " cvičení" : " cvičení") : "Úkoly máš hotové!"}</b>
+      <div class="muted">${ukoly ? "Udělej ho v aplikaci Novakid." : "Super práce 💪"}</div></div></div>
+    <div class="row"><div class="ico" style="background:#f3e8fd">🚀</div>
+      <div class="grow"><b>${esc((D.stav || "").replace(/^Teď se učí:\s*/, "Teď se učíš: "))}</b>
+      <div class="muted">Lekce ${D.jednotka || 0} z ${D.jednotek || 0}${D.dalsi ? " · potom: " + esc(D.dalsi) : ""}</div>
+      <div class="bar"><i style="width:${pct}%"></i></div></div></div>
+    <div class="row"><div class="ico" style="background:#fff4e0">⭐</div>
+      <div class="grow"><b>${D.slovicek || 0} slovíček</b><div class="muted">tolik už ses naučila v Novakidu</div></div></div>
+  </div>`;
+
+  if (budouci.length) h += "<h2>Rozvrh</h2>";
+  const poDnech = {};
+  budouci.slice(0, 14).forEach(l => (poDnech[l[0]] ||= []).push(l));
+  for (const [den, ls_] of Object.entries(poDnech)) {
+    h += `<div class="day">${kdyDen(den)}</div><div class="card">` + ls_.map(l =>
+      `<div class="row"><div class="time">${esc(l[1])}</div><div class="grow"><b>${esc(l[2])}</b><div class="muted">lekce angličtiny</div></div></div>`).join("") + "</div>";
+  }
+  if (D.nacteno) h += `<p class="sub" style="text-align:center;margin-top:18px">Aktualizováno ${esc(String(D.nacteno).replace("T", " ").slice(0, 16))}</p>`;
+  el.innerHTML = h;
+}
+
+// ---------- Slovíčka ----------
+let rezim = ls.get("rezim", "karty"), tema = ls.get("tema", "vse"), balik = [], idx = 0, otoceno = false, skore = { ok: 0, ne: 0 };
+function vsechnaSlova() {
+  const m = new Map();
+  (D?.zpravy || []).forEach((z, i) => (z.slova || []).forEach(([en, cz]) => { if (cz && !m.has(en)) m.set(en, { en, cz, t: i }); }));
+  return [...m.values()];
+}
+function vyber() {
+  let s = vsechnaSlova();
+  if (tema === "neumim") s = s.filter(w => !umim.has(w.en));
+  else if (tema !== "vse") s = s.filter(w => w.t === Number(tema));
+  return s;
+}
+function michej(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function novyBalik() { balik = michej(vyber()); idx = 0; otoceno = false; skore = { ok: 0, ne: 0 }; }
+
+function mluv(t) {
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(t.replace(/…/g, ""));
+    u.lang = "en-GB"; u.rate = .85;
+    const v = speechSynthesis.getVoices().find(v => /en[-_]GB/i.test(v.lang)) || speechSynthesis.getVoices().find(v => /^en/i.test(v.lang));
+    if (v) u.voice = v;
+    speechSynthesis.speak(u);
+  } catch {}
+}
+
+function slova() {
+  const el = $("#t-slova");
+  if (!D) { el.innerHTML = "<h1>Slovíčka</h1>"; return; }
+  const vse = vsechnaSlova(), umimPocet = vse.filter(w => umim.has(w.en)).length;
+  let h = `<h1>Slovíčka</h1><p class="sub">Umíš ${umimPocet} z ${vse.length} slovíček z lekcí ⭐</p>
+    <div class="seg"><button data-r="karty" class="${rezim === "karty" ? "on" : ""}">Kartičky</button><button data-r="seznam" class="${rezim === "seznam" ? "on" : ""}">Seznam</button></div>
+    <select id="tema"><option value="vse">Všechna slovíčka</option><option value="neumim">Jen ta, co ještě neumím</option>
+    ${(D.zpravy || []).map((z, i) => `<option value="${i}">${esc(z.tema.split(/[–:]/).slice(-1)[0].trim() || z.tema)} (${datum(z.datum).getDate()}. ${datum(z.datum).getMonth() + 1}.)</option>`).join("")}</select>`;
+
+  if (rezim === "seznam") {
+    const s = vyber();
+    h += `<div class="card wl">${s.map(w => `<div class="row"><button class="speak" style="margin:0;width:40px;height:40px;font-size:18px" data-mluv="${esc(w.en)}">🔊</button>
+      <div class="grow"><div class="en">${esc(w.en)}</div><div class="muted">${esc(w.cz)}</div></div>${umim.has(w.en) ? '<span class="ok">✓</span>' : ""}</div>`).join("") || "Tady zatím nic není."}</div>`;
+  } else if (!balik.length) {
+    h += `<div class="card" style="text-align:center">${vyber().length ? "Hotovo! 🎉" : "Všechna slovíčka umíš! 🏆"}</div>`;
+  } else if (idx >= balik.length) {
+    h += `<div class="card" style="text-align:center"><div style="font-size:56px">🏆</div><h2 style="margin:6px 0">Hotovo!</h2>
+      <p>Uměla jsi <b>${skore.ok}</b> z ${balik.length}.</p><button class="btn blue" id="znovu">Ještě jednou</button></div>`;
+  } else {
+    const w = balik[idx];
+    h += `<div class="flip ${otoceno ? "otoc" : ""}" id="karta"><div class="in">
+        <div class="face"><div class="w">${esc(w.en)}</div><button class="speak" data-mluv="${esc(w.en)}">🔊</button><div class="h">Víš, co to znamená? Ťukni na kartičku.</div></div>
+        <div class="face zad"><div class="w" style="font-size:28px">${esc(w.cz)}</div><div class="h">${esc(w.en)}</div></div>
+      </div></div>
+      ${otoceno ? `<div class="two"><button class="btn gray" id="ne">Ještě ne 🤔</button><button class="btn green" id="ano">Uměla jsem ✓</button></div>`
+                : `<button class="btn blue" style="width:100%" id="otoc">Otočit kartičku</button>`}
+      <p class="score">Kartička ${idx + 1} z ${balik.length}</p>`;
+  }
+  el.innerHTML = h;
+  $("#tema").value = tema;
+  $("#tema").onchange = e => { tema = e.target.value; ls.set("tema", tema); novyBalik(); slova(); };
+  el.querySelectorAll("[data-r]").forEach(b => b.onclick = () => { rezim = b.dataset.r; ls.set("rezim", rezim); slova(); });
+  el.querySelectorAll("[data-mluv]").forEach(b => b.onclick = e => { e.stopPropagation(); mluv(b.dataset.mluv); });
+  const otoc = () => { if (!otoceno) { otoceno = true; slova(); } };
+  $("#karta") && ($("#karta").onclick = otoc);
+  $("#otoc") && ($("#otoc").onclick = otoc);
+  $("#znovu") && ($("#znovu").onclick = () => { novyBalik(); slova(); });
+  const dal = ok => {
+    const w = balik[idx];
+    if (ok) { umim.add(w.en); skore.ok++; } else { umim.delete(w.en); skore.ne++; }
+    ls.set("umim", [...umim]); idx++; otoceno = false;
+    if (idx >= balik.length && skore.ok >= balik.length * .8) konfety();
+    slova();
+  };
+  $("#ano") && ($("#ano").onclick = () => dal(true));
+  $("#ne") && ($("#ne").onclick = () => dal(false));
+}
+
+function konfety() {
+  const c = $("#konfety"), barvy = ["#ff2d55", "#ff9500", "#ffcc00", "#34c759", "#007aff", "#af52de"];
+  for (let i = 0; i < 60; i++) {
+    const p = document.createElement("i");
+    p.style.left = Math.random() * 100 + "vw"; p.style.background = barvy[i % 6];
+    p.style.animationDelay = Math.random() * .5 + "s"; c.appendChild(p);
+  }
+  setTimeout(() => c.innerHTML = "", 2400);
+}
+
+// ---------- Od učitelky ----------
+function ucitel() {
+  const el = $("#t-ucitel");
+  if (!D) { el.innerHTML = "<h1>Od učitelky</h1>"; return; }
+  el.innerHTML = `<h1>Od učitelky</h1><p class="sub">Co jste dělaly na lekcích a co si procvičit.</p>` +
+    ((D.zpravy || []).map(z => `<div class="card">
+      <div class="muted">${kdyDen(z.datum)} · ${esc(z.od || "")} · ${esc(z.ucitel)}</div>
+      <h2 style="margin:4px 0 8px;font-size:19px">${esc(z.tema)}</h2>
+      <div>${esc(z.cz)}</div>
+      ${z.doporuceni ? `<div style="margin-top:10px;background:#fff8e6;border-radius:12px;padding:10px 12px"><b>💡 Procvič si:</b> ${esc(z.doporuceni)}</div>` : ""}
+      <div class="chips">${(z.slova || []).map(([en, cz]) => `<button class="chip" data-mluv="${esc(en)}" title="${esc(cz)}">🔊 ${esc(en)}</button>`).join("")}</div>
+    </div>`).join("") || '<div class="card">Zatím tu nic není.</div>');
+  el.querySelectorAll("[data-mluv]").forEach(b => b.onclick = () => mluv(b.dataset.mluv));
+}
+
+// ---------- přepínání ----------
+let tab = "lekce";
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
+  tab = b.dataset.t;
+  document.querySelectorAll("nav button").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll("main > section").forEach(s => s.classList.toggle("hidden", s.id !== "t-" + tab));
+  scrollTo(0, 0); vykresli();
+});
+function vykresli() { if (!balik.length && D) novyBalik(); lekce(); slova(); ucitel(); }
+nacti();
+if (location.hash) document.querySelector(`nav button[data-t="${location.hash.slice(1)}"]`)?.click();
+setInterval(() => { if (tab === "lekce") lekce(); }, 60e3);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) nacti(); });
+speechSynthesis?.addEventListener?.("voiceschanged", () => {});
+</script>
+</body>
+</html>
