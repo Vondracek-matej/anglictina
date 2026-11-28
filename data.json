@@ -1,5 +1,5 @@
 {
- "nacteno": "2026-11-27T19:38:00",
+ "nacteno": "2026-11-28T08:05:00",
  "stav": "Teď se učí: Weekend activities",
  "jednotka": 2,
  "jednotek": 10,
@@ -276,9 +276,80 @@
    "2027-02-18",
    "10:00",
    "Tali"
+  ],
+  [
+   "2027-02-19",
+   "12:00",
+   "Roxy R"
   ]
  ],
  "zpravy": [
+  {
+   "datum": "2026-11-27",
+   "od": "09:30",
+   "ucitel": "Maria Kh",
+   "tema": "Magic Academy 3: Kouzelný lektvar – oblečení a školní předměty",
+   "cz": "První lekce s učitelkou Marií Kh, která žákyni moc chválí, jak rychle si zapamatovala nová slovíčka. Procvičovaly rozdíl mezi přítomným časem prostým a průběhovým (Do you wear…? / Are you wearing…?), výslovnost krátkého „u“ a dlouhého „u_e“, čtení slov s nimi a školní předměty (hudba, výtvarka, tělocvik, matematika, zeměpis, angličtina). Žákyně odpovídala na otázky a hrála dialogy.",
+   "doporuceni": "Zopakovat věty typu „I wear … every day.“, „She/He wears … every day.“, „Do you wear … every day?“, „She/He is wearing … now/today.“, „Are you wearing … today?“ a vymyslet vlastní, třeba „I wear a sweater in winter.“ Nahlas číst slova s „u“ (sun, bus, nut, mug) a s „u_e“ (tune, dune, cube, tube).",
+   "slova": [
+    [
+     "I wear … every day",
+     "nosím … každý den"
+    ],
+    [
+     "Are you wearing … today?",
+     "máš dnes na sobě …?"
+    ],
+    [
+     "school subjects",
+     "školní předměty"
+    ],
+    [
+     "music",
+     "hudba"
+    ],
+    [
+     "art",
+     "výtvarná výchova"
+    ],
+    [
+     "PE",
+     "tělocvik"
+    ],
+    [
+     "maths",
+     "matematika"
+    ],
+    [
+     "geography",
+     "zeměpis"
+    ],
+    [
+     "sweater",
+     "svetr"
+    ],
+    [
+     "sun",
+     "slunce"
+    ],
+    [
+     "bus",
+     "autobus"
+    ],
+    [
+     "mug",
+     "hrnek"
+    ],
+    [
+     "cube",
+     "kostka"
+    ],
+    [
+     "tube",
+     "trubka, tuba"
+    ]
+   ]
+  },
   {
    "datum": "2026-11-26",
    "od": "14:00",
